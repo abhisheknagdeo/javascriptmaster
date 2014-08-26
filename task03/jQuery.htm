@@ -65,8 +65,8 @@ mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.
 }</script>
 <link rel="dns-prefetch" href="http://meta.wikimedia.org/">
 <!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.24wmf15/skins/Vector/csshover.min.htc")}</style><![endif]-->
-<script src="jquery.js" type="text/javascript"></script>
-<script src="app.js" type="text/javascript"></script>
+<script src="js/jquery.js" type="text/javascript"></script>
+
 
 <style type="text/css">
 .bookmarksList {
@@ -74,50 +74,39 @@ mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.
 }
 .bookmarksList th,td {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 10px;
+	font-size: 14px;
 	color: #000000;
 }
 .bookmarksList tr {
-	border: 1px solid gray;
+     border: 1px solid gray;
 }
-.bookmarksList td {
-	width:200px;
+.second-row {
+	width:240px;
+	padding:3px;
+}
+.first-row {
+	width:100px;
 	padding:3px;
 }
 .bookmarksList th {
-	background-color:#D2E0E8;
+	background-color:#808080;
 	color:#003366
 }
 .clickable {
-	cursor:pointer;
+     cursor:pointer;
 }
 .stripe1 {
-    background-color:#0f0;
+    background-color:#E8E8E8;
 }
 .stripe2 {
-    background-color:#afa;
+    background-color:#B0B0B0;
 }
 .highlight {
-    background-color: #ffcc00;
-    /*font-weight:bold;*/
+    background-color: #585858;
+    font-weight:bold;
 }
+
 </style>
-
-<script type="text/javascript">
-    $(function() {
-        $("#bookmarksList tr:even").addClass("stripe1");
-        $("#bookmarksList tr:odd").addClass("stripe2");
-
-        $("#bookmarksList tr").hover(
-            function() {
-                $(this).toggleClass("highlight");
-            },
-            function() {
-                $(this).toggleClass("highlight");
-            }
-        );
-    });
-</script>
 	
 </head>
 <body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-JQuery skin-vector action-view vector-animateLayout">
@@ -1743,15 +1732,7 @@ mw.loader.load(["ext.cite","mediawiki.toc","mobile.desktop","mediawiki.action.vi
 <script>if(window.mw){
 mw.config.set({"wgBackendResponseTime":435,"wgHostname":"mw1072"});
 }</script>
-<script>
-$( "#togglelink" ).bind( "click", function() {
-	$("#bookmarksList").toggle();
-	if($("#bookmarksList").css('display') === 'none') {
-		$('#togglelink').text('show');
-	} else {
-		$('#togglelink').text('hide');
-	}
-});
-</script>	
+
+<script src="components/scripts/script.js" type="text/javascript"></script>
 
 	<div class="suggestions" style="display: none; font-size: 13px;"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body></html>
